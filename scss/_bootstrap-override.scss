@@ -1,0 +1,11 @@
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+
+$container-tablet: (720px + $grid-gutter-width);
+$container-desktop: (940px + $grid-gutter-width);
+$container-large-desktop: (1240px + $grid-gutter-width);
+
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1240px;

@@ -1,0 +1,620 @@
+// first wrapper
+.header {
+    background-color: $headerColour;
+    &::before {
+        content:'';
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        box-shadow: 0 0 200px 200px rgba(86,83,76,0.53);
+        background-color: #c00;
+    }
+	&__logo {
+		@include make-md-column(2);
+        @include make-xs-column(12);
+        padding-top: 10px;
+        font-family: $secondaryFont;
+		font-size: 30px;
+		line-height: 50px;
+        text-align:center;
+		color: $logoColour;
+	}
+	
+	&__menu {
+		@include make-md-column(8);
+        @include make-xs-column(12);
+	}
+	
+	&__socials {
+		@include make-md-column(2);
+        @include make-xs-column(12);
+        text-align: center;
+	}
+    
+    &__heading {
+        position:relative;
+        margin-top: 221px;
+        color: $white;
+        font-family: $thirdFont;
+        font-size: 92px;
+        text-align: center;
+        text-shadow: 0 1px 0 $headerColour;
+      
+    }
+    
+    &__wave {
+        margin: 101px auto 52px;
+    }
+    
+    &__description {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 2px;
+        color: $white;
+        text-align: center;
+    }
+    
+    &__button {
+        margin-top: 72px;
+        margin-bottom: 217px;
+        color: $white;
+        text-transform: uppercase;
+        background-color: $headerButtonColour;
+        border: 1px dashed $white;
+    }
+}
+
+.main {
+    &__wrapper {
+        @include make-md-column(12);
+        text-align:center;
+    }
+}
+
+
+
+.menu {
+    display: flex;
+    flex-flow: row;
+    align-items: stretch;
+    padding: 33px;
+	font-family: $headingFont;
+	text-align:center;
+    
+	&__item {
+		float: left;
+		position: relative;
+		margin-right: 102px;
+		
+		&::after {
+			content: '~';
+			display: block;
+			position: absolute;
+            color: #fff;
+			top: 0;
+			right: -55px;
+		}
+		
+		&:last-child {
+			margin-right: 0;
+		}
+		
+		&:last-child::after {
+			display: none;
+		}
+	}
+	
+	&__link {
+	    color: $linkColour;
+        font-size: 14px;
+        text-transform: uppercase;
+        
+        &:hover {
+            cursor: pointer;
+            color: $linkColour;
+            text-decoration: underline;
+        }
+	}
+}
+
+.socials {
+	padding: 27px;
+    
+    &__item {
+       display: inline-block; 
+       margin-right: 27px;
+    }
+    
+    &__link {
+        cursor: pointer;
+        display:block;
+        width: 20px;
+        height: 20px;
+        text-indent: -999999px;
+        color: $headingColour;
+        background-image: url("../images/spritesheet.png");
+        background-repeat: no-repeat;
+        
+        
+        &--twitter {
+            background-position: 0 -25px;
+            
+        }
+        
+        &--facebook {
+            background-position: 0 0;
+        }
+        
+        &--instagram {
+            background-position: -20px -1px;
+        }
+    }
+}
+
+.button {
+    padding: 15px 40px;
+}
+
+//second wrapper
+.about {
+  @include make-md-column(6);
+  text-align: center;
+  margin-top: 85px;
+  margin-bottom: 105px;
+  
+  &__description {
+    margin: 40px 0 25px;
+    font-size: 14px;
+    font-family: $mainFont, serif;
+    letter-spacing: 1px;
+  }
+  
+  &__wrapper-name {
+    margin-bottom: 45px;
+  }
+  
+  &__wrapper-image {
+    float:left;
+  }
+  
+  &__chef {
+    color: $fuscousGray;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Garamond, serif;
+    margin-bottom: 46px;
+    
+    &--heading {
+      font-family: $headingFont;
+      margin-bottom: 45px;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    
+    &--name {
+      float: left;
+      padding: 20px;
+      margin-left: 145px;
+      margin-top: 20px;
+      margin-right: 27px;
+      border-bottom: 1px solid #d7d5ca;
+      border-top: 1px solid #d7d5ca;
+    }
+    
+    &--img {
+      float:left;
+      width: 50px;
+      height: 50px;
+    }
+    
+    &--surname {
+      float:left;
+      padding: 20px;
+      margin-top: 20px;
+      margin-left: 27px;
+      border-bottom: 1px solid #d7d5ca;
+      border-top: 1px solid #d7d5ca;
+    }
+  }
+  
+  &__quote {
+    display:inline-block;
+    position: relative;
+    width: 300px;
+    font-family: $secondaryFont;
+    font-size:24px;
+    line-height: 30px;
+    color: #ab886c;
+    text-align: center;
+    border: none;
+    
+    &::after, &::before {
+      position: absolute;
+      content:"\201C"; 
+      font-size: 40px;
+      color: #b6b5b2;
+      font-family: $quoteFont;
+    }
+    
+    &::after{
+      right: -20px;
+      bottom: -50px;
+    }
+    
+    &::before {
+      transform: rotateY(180deg);
+      top: -15px;
+      left: -25px;
+    }
+  }
+}
+
+.cake-photoes {
+  position: relative;
+  @include make-md-column(6);
+  margin-top: 120px;
+  
+  &__left-side {
+    @include make-sm-column(6); 
+    
+  }
+  
+  &__right-side {
+    @include make-sm-column(6); 
+  }
+  
+  &__img-container { 
+    float:left;
+    position:relative;
+    text-align: center;
+    @include make-xs-column(12);
+    
+    &--pict1 {
+      margin-bottom: 20px;
+    }
+    
+    &--pict2 {
+      margin-bottom: 20px;
+    }
+    
+    &--pict3 {
+      margin-bottom: 20px;  
+    }
+    
+    &::before {
+      content:'';
+      position:absolute;
+      top: 5px;
+      left: 15px;
+      width: 285px;
+      height: 240px;
+      border: 5px solid $white;
+    }
+  }
+  
+  &__center-block {
+    position: absolute;
+    left: 214px;
+    top: 141px;
+    padding-top: 90px;
+    width: 227px;
+    height: 230px;
+    font-family: $headingFont;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #c9b176;
+    background-image: url("../images/vector.png");
+    background-size: cover;
+  }
+}
+
+//third wrapper
+.tasty-pancakes {
+  @include make-md-column-offset(1);
+  @include make-md-column(11);
+  margin-top: 190px;
+  margin-bottom: 180px;
+  
+  &__left-column {
+    float:left;
+    height: 512px;
+    width: 370px;
+    background-image: url('../images/tasty_pancakes.png');
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 187px;
+      left:42px;
+      width: 25px;
+      height: 145px;
+      background-image: url('../images/stars.png');
+      background-repeat: no-repeat;
+    }
+  }
+  
+  &__right-column {
+    float:left;
+    position: relative;
+    padding: 74px 64px;
+    height: 512px;
+    width: 628px;
+    background:$white url(../images/windmill.png) no-repeat right bottom;
+    
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -25px;
+      background-color: $white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+  
+  &__description {
+    margin-top: 48px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+    
+  &__40minutes {
+    position: absolute;
+    top: -45px;
+    right: -120px;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    line-height: 30px;
+    text-align: center;
+    background: url("../images/40min.png") no-repeat;
+    box-shadow: -3px 3px 20px 5px rgba(105, 80, 58, .45);
+    overflow: hidden;
+  }
+  
+  &__ready {
+    margin-top: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #a47d5e;
+  }
+  
+  &__40{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 92px;
+    text-transform: uppercase;
+    color: #dfc691;
+  }
+  
+  &__min {
+    font-size: 18px;
+    color: #979285;
+  }
+}
+
+//fourth-wrapper
+.breakfast {
+  @include make-md-column(6);
+  padding-top: 94px;
+  text-align: center;
+  
+  &__price {
+    margin-bottom: 56px;
+    font-family: $headingFont;
+    font-size: 36px;
+    line-height: 30px;
+    color: $priceColour;
+  }
+}
+
+.escape-flair {
+  @include make-md-column(6);
+  text-align: center;
+  &__wrapper {
+    position: relative;
+    padding: 11px;
+    margin-top: 112px;
+    margin-bottom: 363px;
+    width: 422px;
+    height: 659px;
+    background-color: #f3f1e9;
+    
+  }
+  
+  &__wrapper-container {
+    z-index: -1;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px;
+    width: 100%;
+    height: 96%;
+    background-color: #d9d6c7;
+  }
+  
+  &__inner-wrapper-container {
+    z-index: -2;
+    position: absolute;
+    top: 28px;
+    left: 22px;
+    padding: 5px;
+    width: 100%;
+    height: 91%;
+    background-color: #c0bcaf;
+  }
+  
+  
+  .cutaway {
+    height: 100%;
+    background: url("../images/spikelets.png") 250px 490px no-repeat,
+      url("../images/left-right-border.png") right 0 repeat-y,
+      url("../images/left-right-border.png") repeat-y,
+      url("../images/top-bottom-border.png") repeat-x,
+      #f3f1e9 url("../images/top-bottom-border.png") 0  bottom repeat-x;
+    
+    &-bg { 
+      width: 100%;
+      height: 100%;
+      background: url("../images/left-right-border.png") right 0 repeat-y,
+      url("../images/left-right-border.png") repeat-y,
+      url("../images/top-bottom-border.png") repeat-x,
+      $cutawayBackground url("../images/top-bottom-border.png") 0  bottom repeat-x;
+    }
+    
+     &-secondbg { 
+      width: 100%;
+      height: 100%;
+      background: url("../images/left-right-border.png") right 0 repeat-y,
+      url("../images/left-right-border.png") repeat-y,
+      url("../images/top-bottom-border.png") repeat-x,
+      $cutawayBackgroundBackground url("../images/top-bottom-border.png") 0  bottom repeat-x;
+    }
+    
+    &__est {
+      float:left;
+      margin-top: 42px;
+      margin-left: 96px;
+      text-transform: uppercase;
+      font: bold 14px/30px $headingFont;
+      color: $cutawayFont;
+    }
+  
+    &__1893 {
+      float:right;
+      margin-top: 42px;
+      margin-right: 96px;
+      font: bold 14px/30px $headingFont;
+      color: $cutawayFont;
+    }
+    
+    &__heading-first {
+      margin-top: 80px;
+      font: bold 44px/60px $headingFont;
+      ccolor: $cutawayFont;
+    }
+    
+    &__heading-second {
+      font: bold 44px/60px $headingFont;
+      color: $cutawayFont;
+      margin-bottom: 45px;
+    }
+    
+    &__description {
+      font: normal 14px/30px $mainFont;
+      color: $cutawayFont;
+      margin-bottom: 54px;
+    }
+    
+    &__button {
+      display: inline-block;
+      width: 200px;
+      font: bold 14px/30px $headingFont;
+      text-transform: uppercase;
+      border: 1px solid black;
+      background-color: transparent;
+      color: #a47d5e;
+    }
+  }
+}
+
+//footer
+.footer {
+  &-header {
+    @include make-md-column(12);
+    margin-top: 90px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  &-left-column {
+    @include make-md-column(3);
+    
+    &__name-img {
+      margin: 23px 0 23px 0;
+      font-family: $headingFont;
+      font-size: 30px;
+      color: #a47d5e;
+    }
+    
+    &__description-img {
+      font-size: 14px;
+      font-family: $mainFont;
+      line-height: 20px;
+      margin-bottom: 60px;
+      color: #56534c;
+    }
+    
+    &__wrapper-img{
+      text-align: center;
+    }
+    
+    &__img {
+      border-radius: 50%;
+    }
+  }
+  
+  &-right-column {
+    @include make-md-column-offset(1);
+    @include make-md-column(8);
+    margin-top: 90px;
+  }
+}
+
+.sandwich {
+  position: relative;
+  height: 559px;
+  padding: 10px;
+  margin-left: 20px;
+  background-color: $white;
+  
+  &__img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  &__15min {
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, .7);
+  }
+  
+  &__35min {
+    position: absolute;
+    top: 175px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, .7);  
+  }
+  
+  &__50min {
+    position: absolute;
+    top: 375px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: $white;  
+  }
+  
+  &__button {
+    position: absolute;
+    bottom:-15px;
+    left: -20px;
+    width: 170px;
+    background-color: $white;
+    border: 1px dashed #dfc691;
+    text-transform: uppercase;
+    color: #dfc691;
+  }
+}

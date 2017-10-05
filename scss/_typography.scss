@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/Proxima Nova/Proxima Nova Black");
+}
+
+@font-face {
+	font-family: Scriptina;
+	src: local('Scriptina'), url('../fonts/scriptina.ttf');
+}
+
+@font-face {
+	font-family: AlegreyaR;
+	src: local('Alegreya'), url('../fonts/Alegreya-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Playfair Display', serif;
+    src: local('Playfair Display'), url('../fonts/PlayfairDisplay-Regular.ttf')
+}
+
+
+$mainFont: "Proxima Nova";
+$secondaryFont: Scriptina;
+$thirdFont: 'Playfair Display';
+$headingFont: AlegreyaR;
+$quoteFont: "Times New Roman";
