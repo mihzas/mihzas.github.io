@@ -60,11 +60,94 @@ body {
 
 }
 
+
+.menu {
+    display: flex;
+    flex-flow: row;
+    align-items: stretch;
+    padding: 33px;
+	font-family: $headingFont;
+	text-align:center;
+    
+	&__item {
+		float: left;
+		position: relative;
+		margin-right: 102px;
+		
+		&::after {
+			content: '~';
+			display: block;
+			position: absolute;
+            color: #fff;
+			top: 0;
+			right: -55px;
+		}
+		
+		&:last-child {
+			margin-right: 0;
+		}
+		
+		&:last-child::after {
+			display: none;
+		}
+	}
+	
+	&__link {
+	    color: $linkColour;
+        font-size: 14px;
+        text-transform: uppercase;
+        
+        &:hover {
+            cursor: pointer;
+            color: $linkColour;
+            text-decoration: underline;
+        }
+	}
+}
+
+.socials {
+	padding: 27px;
+    
+    &__item {
+       display: inline-block; 
+       margin-right: 27px;
+    }
+    
+    &__link {
+        cursor: pointer;
+        display:block;
+        width: 20px;
+        height: 20px;
+        text-indent: -999999px;
+        color: $headingColour;
+        background-image: url("../images/spritesheet.png");
+        background-repeat: no-repeat;
+        
+        
+        &--twitter {
+            background-position: 0 -25px;
+            
+        }
+        
+        &--facebook {
+            background-position: 0 0;
+        }
+        
+        &--instagram {
+            background-position: -20px -1px;
+        }
+    }
+}
+
+.button {
+    padding: 15px 40px;
+}
+
 /* Header
 -----------------------------------------------------------------------------*/
 .header-wrapper {
 	//min-height: 1240px;
-	background-image: url("../images/banner.png");
+	background-image: url("../images/banner.jpg");
     background-size: cover;
     min-height: 762px;
 }
@@ -75,7 +158,7 @@ body {
 .second-wrapper {
   position: relative;
   margin-top: 20px;
-  background-image: url('../images/second_bg.png');
+  background-image: url('../images/art_cakesbg.jpg');
   
   &::before {
     content: '';
@@ -92,7 +175,7 @@ body {
 }
 
 .third-wrapper {
-  background-image: url("../images/tasty_pancakebgs.png");
+  background-image: url("../images/tasty_pancakes.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

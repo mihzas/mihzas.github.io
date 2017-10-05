@@ -6314,10 +6314,65 @@ body {
       color: #c2beba;
       font-weight: bold; }
 
+.menu {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  padding: 33px;
+  font-family: AlegreyaR;
+  text-align: center; }
+  .menu__item {
+    float: left;
+    position: relative;
+    margin-right: 102px; }
+    .menu__item::after {
+      content: '~';
+      display: block;
+      position: absolute;
+      color: #fff;
+      top: 0;
+      right: -55px; }
+    .menu__item:last-child {
+      margin-right: 0; }
+    .menu__item:last-child::after {
+      display: none; }
+  .menu__link {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase; }
+    .menu__link:hover {
+      cursor: pointer;
+      color: #fff;
+      text-decoration: underline; }
+
+.socials {
+  padding: 27px; }
+  .socials__item {
+    display: inline-block;
+    margin-right: 27px; }
+  .socials__link {
+    cursor: pointer;
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-indent: -999999px;
+    color: #56534c;
+    background-image: url("../images/spritesheet.png");
+    background-repeat: no-repeat; }
+    .socials__link--twitter {
+      background-position: 0 -25px; }
+    .socials__link--facebook {
+      background-position: 0 0; }
+    .socials__link--instagram {
+      background-position: -20px -1px; }
+
+.button {
+  padding: 15px 40px; }
+
 /* Header
 -----------------------------------------------------------------------------*/
 .header-wrapper {
-  background-image: url("../images/banner.png");
+  background-image: url("../images/banner.jpg");
   background-size: cover;
   min-height: 762px; }
 
@@ -6326,7 +6381,7 @@ body {
 .second-wrapper {
   position: relative;
   margin-top: 20px;
-  background-image: url("../images/second_bg.png"); }
+  background-image: url("../images/art_cakesbg.jpg"); }
   .second-wrapper::before {
     content: '';
     display: block;
@@ -6340,7 +6395,7 @@ body {
     min-height: 762px; }
 
 .third-wrapper {
-  background-image: url("../images/tasty_pancakebgs.png");
+  background-image: url("../images/tasty_pancakes.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -6457,61 +6512,6 @@ body {
     .main__wrapper {
       float: left;
       width: 100%; } }
-
-.menu {
-  display: flex;
-  flex-flow: row;
-  align-items: stretch;
-  padding: 33px;
-  font-family: AlegreyaR;
-  text-align: center; }
-  .menu__item {
-    float: left;
-    position: relative;
-    margin-right: 102px; }
-    .menu__item::after {
-      content: '~';
-      display: block;
-      position: absolute;
-      color: #fff;
-      top: 0;
-      right: -55px; }
-    .menu__item:last-child {
-      margin-right: 0; }
-    .menu__item:last-child::after {
-      display: none; }
-  .menu__link {
-    color: #fff;
-    font-size: 14px;
-    text-transform: uppercase; }
-    .menu__link:hover {
-      cursor: pointer;
-      color: #fff;
-      text-decoration: underline; }
-
-.socials {
-  padding: 27px; }
-  .socials__item {
-    display: inline-block;
-    margin-right: 27px; }
-  .socials__link {
-    cursor: pointer;
-    display: block;
-    width: 20px;
-    height: 20px;
-    text-indent: -999999px;
-    color: #56534c;
-    background-image: url("../images/spritesheet.png");
-    background-repeat: no-repeat; }
-    .socials__link--twitter {
-      background-position: 0 -25px; }
-    .socials__link--facebook {
-      background-position: 0 0; }
-    .socials__link--instagram {
-      background-position: -20px -1px; }
-
-.button {
-  padding: 15px 40px; }
 
 .about {
   position: relative;
@@ -6691,7 +6691,7 @@ body {
     padding: 74px 64px;
     height: 512px;
     width: 628px;
-    background: #fff url(../images/windmill.png) no-repeat right bottom; }
+    background: #fff url("../images/windmill.png") no-repeat right bottom; }
     .tasty-pancakes__right-column::after {
       content: '';
       display: block;
