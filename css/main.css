@@ -443,7 +443,7 @@ template {
 
 @font-face {
   font-family: Scriptina;
-  src: local("Scriptina"), url("../fonts/scriptina.ttf"); }
+  src: local("Scriptina"), url("../fonts/Scriptina.ttf"); }
 
 @font-face {
   font-family: AlegreyaR;
