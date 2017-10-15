@@ -14,6 +14,14 @@ body {
 	height: 100%;
 }
 
+.logo {
+  font-family: $secondaryFont;
+  font-size: 30px;
+  line-height: 50px;
+  text-align:center;
+  color: $logoColour;
+}
+
 .heading {
   font-family: $headingFont;
   &__title {
@@ -78,7 +86,7 @@ body {
 			content: '~';
 			display: block;
 			position: absolute;
-            color: #fff;
+            color: $white;
 			top: 0;
 			right: -55px;
 		}
@@ -158,7 +166,8 @@ body {
 .second-wrapper {
   position: relative;
   margin-top: 20px;
-  background-image: url('../images/art_cakesbg.jpg');
+  background-image: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(249,250,252,1) 44%, rgba(242,245,249,0) 100%), 
+    url('../images/art_cakesbg.jpg');
   
   &::before {
     content: '';

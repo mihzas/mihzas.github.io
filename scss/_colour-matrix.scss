@@ -1,13 +1,16 @@
 @import 'variables';
+
 $logoColour: $white;
 $headerColour:  rgba(86,83,76,0.53);
 $headingColour: $fuscousGray;
 $linkColour: $white;
-$headingDescriptionColour: #b6967d;
-$headerButtonColour: #85827d; 
+$headingDescriptionColour: $mongoose;
+$headerButtonColour: $naturalGray; 
 $centerShadow: rgba(86,83,76,0.14);
-$priceColour: #dfc691;
-$priceDescriptionColour: #c2beba;
-$cutawayBackground: #d9d6c7;
-$cutawayBackgroundBackground: #c0bcaf;
-$cutawayFont: #56534c;
+$priceColour: $calico;
+$priceDescriptionColour: $cottonSeed;
+$cutawayBackground: $moonMist;
+$cutawayBackgroundBackground: $tea;
+$cutawayFont: $fuscousGray;
+$whiteCorner: $alabaster;
+$chefSideColor: $timberwolf; 

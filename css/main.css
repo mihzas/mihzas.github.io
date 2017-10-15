@@ -6281,6 +6281,13 @@ body {
   height: auto !important;
   height: 100%; }
 
+.logo {
+  font-family: Scriptina;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff; }
+
 .heading {
   font-family: AlegreyaR; }
   .heading__title {
@@ -6311,7 +6318,7 @@ body {
       font-family: "Proxima Nova";
       font-size: 16px;
       text-transform: none;
-      color: #c2beba;
+      color: #b6b5b2;
       font-weight: bold; }
 
 .menu {
@@ -6381,7 +6388,7 @@ body {
 .second-wrapper {
   position: relative;
   margin-top: 20px;
-  background-image: url("../images/art_cakesbg.jpg"); }
+  background-image: linear-gradient(90deg, white 0%, #f9fafc 44%, rgba(242, 245, 249, 0) 100%), url("../images/art_cakesbg.jpg"); }
   .second-wrapper::before {
     content: '';
     display: block;
@@ -6437,12 +6444,7 @@ body {
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 10px;
-    font-family: Scriptina;
-    font-size: 30px;
-    line-height: 50px;
-    text-align: center;
-    color: #fff; }
+    padding-top: 10px; }
     @media (min-width: 992px) {
       .header__logo {
         float: left;
@@ -6706,6 +6708,41 @@ body {
     margin-top: 48px;
     font-size: 14px;
     line-height: 24px; }
+  .tasty-pancakes__slider {
+    position: relative;
+    margin: 108px auto 0; }
+    .tasty-pancakes__slider::before {
+      content: "<";
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: -20px;
+      padding: 6px;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      text-align: center;
+      color: #dbc1ab;
+      border: 1px solid #dbc1ab;
+      border-radius: 50%; }
+    .tasty-pancakes__slider::after {
+      content: ">";
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 90px;
+      text-align: center;
+      padding: 6px;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      color: #5a574f;
+      border: 1px solid #5a574f;
+      border-radius: 50%; }
+  .tasty-pancakes__img {
+    margin-left: 30px; }
   .tasty-pancakes__40minutes {
     position: absolute;
     top: -45px;
@@ -6866,7 +6903,8 @@ body {
     margin-bottom: 60px;
     color: #56534c; }
   .footer-left-column__wrapper-img {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 120px; }
   .footer-left-column__img {
     border-radius: 50%; }
 
@@ -6893,27 +6931,61 @@ body {
   .sandwich__img {
     height: 100%;
     width: 100%; }
+  .sandwich__title {
+    text-transform: uppercase;
+    font-family: AlegreyaR;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: #a47d5e; }
+  .sandwich__time {
+    font-family: AlegreyaR;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 30px;
+    color: #56534c; }
+  .sandwich__mins {
+    font-family: AlegreyaR;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: #979285; }
   .sandwich__15min {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: -25px;
+    top: -26px;
     right: 10px;
     width: 200px;
     height: 200px;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.7); }
   .sandwich__35min {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 175px;
     right: 10px;
     width: 200px;
     height: 200px;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.7); }
   .sandwich__50min {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 375px;
     right: 10px;
     width: 200px;
     height: 200px;
-    background-color: #fff; }
+    text-align: center;
+    background: #fff url("../images/40min.png"); }
   .sandwich__button {
     position: absolute;
     bottom: -15px;
@@ -6923,3 +6995,38 @@ body {
     border: 1px dashed #dfc691;
     text-transform: uppercase;
     color: #dfc691; }
+
+.footer__menu-wrapper {
+  clear: left; }
+
+.footer__logo {
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #56534c; }
+  @media (min-width: 992px) {
+    .footer__logo {
+      float: left;
+      width: 16.66667%; } }
+
+.footer__menu {
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 992px) {
+    .footer__menu {
+      float: left;
+      width: 41.66667%; } }
+  .footer__menu .menu__item::after {
+    color: #56534c; }
+  .footer__menu .menu__item:last-child::after {
+    display: none; }
+  .footer__menu .menu__link {
+    color: #56534c; }

@@ -16,11 +16,7 @@
 		@include make-md-column(2);
         @include make-xs-column(12);
         padding-top: 10px;
-        font-family: $secondaryFont;
-		font-size: 30px;
-		line-height: 50px;
-        text-align:center;
-		color: $logoColour;
+        
 	}
 	
 	&__menu {
@@ -101,7 +97,7 @@
     color: $fuscousGray;
     font-weight: bold;
     font-size: 18px;
-    font-family: Garamond, serif;
+    font-family: $chefFont, serif;
     margin-bottom: 46px;
     
     &--heading {
@@ -117,8 +113,8 @@
       margin-left: 145px;
       margin-top: 20px;
       margin-right: 27px;
-      border-bottom: 1px solid #d7d5ca;
-      border-top: 1px solid #d7d5ca;
+      border-bottom: 1px solid $chefSideColor;
+      border-top: 1px solid $chefSideColor;
     }
     
     &--img {
@@ -132,8 +128,8 @@
       padding: 20px;
       margin-top: 20px;
       margin-left: 27px;
-      border-bottom: 1px solid #d7d5ca;
-      border-top: 1px solid #d7d5ca;
+      border-bottom: 1px solid $chefSideColor;
+      border-top: 1px solid $chefSideColor;
     }
   }
   
@@ -280,6 +276,49 @@
     margin-top: 48px;
     font-size: 14px;
     line-height: 24px;
+  }
+  
+  &__slider {
+    position: relative;
+    margin: 108px auto 0;
+    
+    &::before{
+      content: "<";
+      cursor: pointer;
+      display:block;
+      position:absolute;
+      top: 30px;
+      left: -20px;
+      padding: 6px;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      text-align:center;
+      color: #dbc1ab;
+      border: 1px solid #dbc1ab;
+      border-radius: 50%;
+    }
+    
+    &::after{
+      content: ">";
+      cursor: pointer;
+      display:block;
+      position:absolute;
+      top: 30px;
+      right: 90px;
+      text-align:center;
+      padding: 6px;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      color: #5a574f;
+      border: 1px solid #5a574f;
+      border-radius: 50%;
+    }
+  }
+  
+  &__img {
+   margin-left:30px 
   }
     
   &__40minutes {
@@ -471,6 +510,7 @@
     
     &__wrapper-img{
       text-align: center;
+      margin-bottom: 120px;
     }
     
     &__img {
@@ -497,31 +537,71 @@
     width: 100%;
   }
   
+  &__title {
+    text-transform: uppercase;
+    font-family: $headingFont;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: #a47d5e;
+  }
+  
+  &__time {
+    font-family: $headingFont;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 30px;
+    color: #56534c;
+  }
+  
+  &__mins {
+    font-family: $headingFont;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    color: #979285;
+  }
+  
   &__15min {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: -25px;
+    top: -26px;
     right: 10px;
     width: 200px;
     height: 200px;
+    text-align: center;
     background-color: rgba(255, 255, 255, .7);
   }
   
   &__35min {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 175px;
     right: 10px;
     width: 200px;
     height: 200px;
+    text-align: center;
     background-color: rgba(255, 255, 255, .7);  
   }
   
   &__50min {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 375px;
     right: 10px;
     width: 200px;
     height: 200px;
-    background-color: $white;  
+    text-align: center;
+    background:$white url("../images/40min.png");  
   }
   
   &__button {
@@ -533,5 +613,44 @@
     border: 1px dashed #dfc691;
     text-transform: uppercase;
     color: #dfc691;
+  }
+}
+
+.footer{
+  
+  &__menu-wrapper {
+    clear: left;
+  }
+  
+  &__logo {
+    @include make-md-column(2);
+    color: #56534c;  
+  }
+  
+  &__menu {
+    @include make-md-column(5);
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  .menu {
+    &__item {
+      
+      &::after {
+        color: $fuscousGray;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    &__link {
+      color: $fuscousGray;
+    }
+  }
+    
   }
 }
